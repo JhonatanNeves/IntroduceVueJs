@@ -1,20 +1,36 @@
 <template>
 <div id="app">
-  <h1>Guia do Samurai</h1>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>Clientes Bank</h1>
+  <Cliente :cliente="clienteJhonatan" :showIdade="true"/>
+  <Cliente :cliente="clienteJhonatan" :showIdade="false"/>
+  <Cliente :cliente="clienteJhonatan" :showIdade="true"/>
+  <Cliente :cliente="clienteJhonatan" :showIdade="false"/>
+  
+  
+
 </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Cliente from './components/Cliente.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data(){
+    return {
+      nomeDoJhonatan: "J. Neves ",
+      clienteJhonatan:{
+        nome: "Jhonatan Neves",
+        email: "teste2e@gmail.com",
+        idade: 99
+      }
+    }
+  },
+  components:{
+    Cliente
   }
-}
+  }
+
 </script>
 
 <style>
@@ -23,7 +39,9 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #2E4C28 ;
   margin-top: 60px;
+  background-color:white;
+  ;
 }
 </style>
