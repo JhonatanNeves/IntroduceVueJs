@@ -1,10 +1,10 @@
 <template>
 <div id="app">
-  <h1>Clientes Bank</h1>
-  <Cliente :cliente="clienteJhonatan" :showIdade="true"/>
-  <Cliente :cliente="clienteJhonatan" :showIdade="false"/>
-  <Cliente :cliente="clienteJhonatan" :showIdade="true"/>
-  <Cliente :cliente="clienteJhonatan" :showIdade="false"/>
+  
+  <div v-for="cliente in clientes" :key="cliente.id">
+    <Cliente :cliente="cliente"/>
+
+  </div>
   
   
 
@@ -23,7 +23,27 @@ export default {
         nome: "Jhonatan Neves",
         email: "teste2e@gmail.com",
         idade: 99
-      }
+      },
+      clientes:[
+        {
+          id: 2,
+          nome: "Jhonatan Neves",
+        email: "teste22@gmail.com",
+        idade: 99
+        },
+        {
+          id: 3,
+          nome: "Jhonatan Pro",
+        email: "teste4578@gmail.com",
+        idade: 55
+        },
+        {
+          id: 4,
+          nome: "Jhonatan Val",
+        email: "teste99@gmail.com",
+        idade: 33
+        },
+      ]
     }
   },
   components:{
