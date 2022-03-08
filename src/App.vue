@@ -1,8 +1,10 @@
 <template>
 <div id="app">
   
-  <div v-for="cliente in clientes" :key="cliente.id">
+  <div v-for="(cliente, index) in clientes" :key="cliente.id">
+    <h1>{{ index }}</h1>
     <Cliente :cliente="cliente"/>
+    <br>
 
   </div>
   
